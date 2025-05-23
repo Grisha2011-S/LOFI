@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block body %}
+<main>
+    {%for i in users%}
+    <div class="user-card">
+        <h2>{{ i.username }}</h2>
+        <p>Email: {{ i.email }}</p>
+        <p>id:{{i.id}}</p> 
+        <a href="{{i.id}}/del">удалить</a>
+        
+    {% endfor %}
+    
+    {% if error %}
+        <p style="color: red;">{{error}}</p>
+        
+        {% endif %}
+</main> 
+{% endblock %}

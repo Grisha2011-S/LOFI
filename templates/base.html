@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Главная</a></li>
+                <li><a href="{{ url_for('login') }}">Вход</a></li>
+                <li><a href="{{ url_for('register') }}">Регистрация</a></li>
+                <li><a href="{{ url_for('logout') }}">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+                 
+
+    {% block body %}{% endblock %}
+</body>
+</html>

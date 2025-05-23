@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block body %}
+<main>
+    {% if user and user.username %}
+    <h1 style="text-align: center;">Hello, {{ user.username }}</h1>
+    <a style="text-decoration: none;" href="Admin">Админ панель</a>
+{% else %}
+    <h1 style="text-align: center;">Welcome to the site!</h1>
+{% endif %}
+</main> 
+{% endblock %}

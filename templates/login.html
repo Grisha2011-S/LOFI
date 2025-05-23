@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/user.css')}}">
+<main>
+<form method="post">
+    <h1>Вход</h1>
+    <div class="form-group">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+</main>
+{% endblock %}
